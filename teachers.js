@@ -21,4 +21,5 @@ ORDER BY teacher;
   res.rows.forEach(row => {
     console.log(`${row.cohort}: ${row.teacher}`);
   })
-});
+})
+.catch(err => console.error('query error', err.stack));
